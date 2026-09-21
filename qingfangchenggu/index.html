@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="轻纺城股吧 - 专业投资者交流社区，提供浙江中国轻纺城集团股份有限公司（600790）最新行情、技术分析、投资策略及股民实时讨论。">
+    <meta name="keywords" content="轻纺城股吧,轻纺城,600790,中国轻纺城,股票投资,股市讨论">
+    <title>轻纺城股吧 - 股票行情分析与投资者交流平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8e8;
+            --accent-color: #ff6b35;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --nav-height: 60px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--card-bg);
+            height: var(--nav-height);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-login {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-login:hover {
+            background-color: #004494;
+        }
+
+        /* 移动端菜单按钮 */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 主体布局 */
+        .main-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+        }
+
+        /* 左侧内容区 */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 股票核心数据卡片 */
+        .stock-header-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2);
+        }
+
+        .stock-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .stock-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .stock-code {
+            font-size: 1rem;
+            opacity: 0.8;
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .stock-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .current-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .price-change {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .price-change.up { background-color: rgba(40, 167, 69, 0.2); color: #d4edda; }
+        .price-change.down { background-color: rgba(220, 53, 69, 0.2); color: #f8d7da; }
+
+        .stock-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .stat-item span {
+            font-weight: 700;
+        }
+
+        /* 版块标签 */
+        .section-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 8px 16px;
+            background: none;
+            border: none;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background-color: #f0f0f0;
+        }
+
+        /* 讨论列表 */
+        .discussion-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .discussion-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .discussion-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .d-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .d-user {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .d-time {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .d-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .d-title:hover {
+            text-decoration: underline;
+        }
+
+        .d-content {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .d-footer {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .d-action {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .d-action:hover {
+            color: var(--primary-color);
+        }
+
+        /* 右侧边栏 */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 榜单列表 */
+        .rank-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .rank-num {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 700;
+            background-color: #eee;
+            color: #666;
+        }
+
+        .rank-item:nth-child(1) .rank-num { background-color: #ffd700; color: #fff; }
+        .rank-item:nth-child(2) .rank-num { background-color: #c0c0c0; color: #fff; }
+        .rank-item:nth-child(3) .rank-num { background-color: #cd7f32; color: #fff; }
+
+        .rank-title {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .rank-hot {
+            font-size: 0.8rem;
+            color: var(--danger-color);
+            font-weight: 600;
+        }
+
+        /* 公司简介 */
+        .company-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .company-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            background-color: #eef2f7;
+            color: var(--primary-color);
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+
+        /* 分页 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .page-btn {
+            padding: 8px 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        .page-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏导航链接 */
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .stock-header-card {
+                padding: 15px;
+            }
+
+            .stock-name {
+                font-size: 1.4rem;
+            }
+
+            .current-price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <span>📈</span> 轻纺城股吧
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">行情中心</a>
+            <a href="#">研报分析</a>
+            <a href="#">龙虎榜</a>
+            <a href="#">自选股</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="#" class="btn-login">登录 / 注册</a>
+        </div>
+        <div class="menu-toggle">☰</div>
+    </div>
+</header>
+
+<main class="main-container">
+    
+    <!-- 左侧内容区 -->
+    <div class="content-area">
+        
+        <!-- 股票核心数据卡片 -->
+        <section class="stock-header-card">
+            <div class="stock-title-row">
+                <div>
+                    <div class="stock-name">浙江中国轻纺城集团股份有限公司</div>
+                    <div class="stock-code">600790.SH</div>
+                </div>
+                <div class="stock-price-row">
+                    <span class="current-price">6.52</span>
+                    <span class="price-change up">+0.15 (+2.35%)</span>
+                </div>
+            </div>
+            <div class="stock-stats">
+                <div class="stat-item">今开: <span>6.38</span></div>
+                <div class="stat-item">昨收: <span>6.37</span></div>
+                <div class="stat-item">最高: <span>6.55</span></div>
+                <div class="stat-item">最低: <span>6.35</span></div>
+                <div class="stat-item">成交量: <span>24.5万</span></div>
+                <div class="stat-item">成交额: <span>1.62亿</span></div>
+            </div>
+        </section>
+
+        <!-- 版块标签 -->
+        <div class="section-tabs">
+            <button class="tab-btn active">最新讨论</button>
+            <button class="tab-btn">热门话题</button>
+            <button class="tab-btn">公告解读</button>
+            <button class="tab-btn">财务分析</button>
+            <button class="tab-btn">技术交流</button>
+        </div>
+
+        <!-- 讨论列表 -->
+        <div class="discussion-list">
+            <article class="discussion-item">
+                <div class="d-header">
+                    <span class="d-user">股海浮沉客</span>
+                    <span class="d-time">2分钟前</span>
+                </div>
+                <h3 class="d-title"><a href="#">轻纺城今日走势分析：量能配合良好，有望挑战前高</a></h3>
+                <p class="d-content">从技术面看，今天突破了5日均线，且成交量放大明显。纺织板块整体回暖，轻纺城作为龙头，今天的表现符合预期。大家觉得明天会继续冲吗？</p>
+                <div class="d-footer">
+                    <span class="d-action">👍 128</span>
+                    <span class="d-action">💬 回复 42</span>
+                    <span class="d-action">⭐ 收藏</span>
+                </div>
+            </article>
+
+            <article class="discussion-item">
+                <div class="d-header">
+                    <span class="d-user">价值投资小白</span>
+                    <span class="d-time">15分钟前</span>
+                </div>
+                <h3 class="d-title"><a href="#">关于轻纺城长期持有的思考</a></h3>
+                <p class="d-content">轻纺城的核心逻辑还是在于绍兴柯桥的实体市场优势。虽然电商冲击，但大宗面料交易依然依赖线下展会。近期公司也在布局数字化，长期看估值修复空间还是有的。</p>
+                <div class="d-footer">
+                    <span class="d-action">👍 86</span>
+                    <span class="d-action">💬 回复 19</span>
+                    <span class="d-action">⭐ 收藏</span>
+                </div>
+            </article>
+
+            <article class="discussion-item">
+                <div class="d-header">
+                    <span class="d-user">短线猎人</span>
+                    <span class="d-time">32分钟前</span>
+                </div>
+                <h3 class="d-title"><a href="#">轻纺城股吧异动追踪：主力资金净流入超5000万</a></h3>
+                <p class="d-content">龙虎榜数据显示，今天游资买入较多，主要集中在几个席位。这种短线拉升往往持续性一般，建议关注明天的量能能否维持，如果缩量回调就是减仓机会。</p>
+                <div class="d-footer">
+                    <span class="d-action">👍 205</span>
+                    <span class="d-action">💬 回复 67</span>
+                    <span class="d-action">⭐ 收藏</span>
+                </div>
+            </article>
+
+            <article class="discussion-item">
+                <div class="d-header">
+                    <span class="d-user">纺织行业观察员</span>
+                    <span class="d-time">1小时前</span>
+                </div>
+                <h3 class="d-title"><a href="#">行业新闻：秋冬面料需求回暖，轻纺城商户反馈积极</a></h3>
+                <p class="d-content">从商户反馈来看，近期秋冬家纺面料走货速度比上月快了不少。这直接利好轻纺城的租金收入和商户经营，基本面支撑正在加强。</p>
+                <div class="d-footer">
+                    <span class="d-action">👍 56</span>
+                    <span class="d-action">💬 回复 12</span>
+                    <span class="d-action">⭐ 收藏</span>
+                </div>
+            </article>
+
+            <article class="discussion-item">
+                <div class="d-header">
+                    <span class="d-user">迷茫的韭菜</span>
+                    <span class="d-time">2小时前</span>
+                </div>
+                <h3 class="d-title"><a href="#">600790到底适不适合年轻人理财？</a></h3>
+                <p class="d-content">一直在观望，觉得它股性比较慢，但是分红还行。有没有老手给点建议，是做短线波段还是长线拿着吃股息？</p>
+                <div class="d-footer">
+                    <span class="d-action">👍 34</span>
+                    <span class="d-action">💬 回复 28</span>
+                    <span class="d-action">⭐ 收藏</span>
+                </div>
+            </article>
+        </div>
+
+        <!-- 分页 -->
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">...</button>
+            <button class="page-btn">10</button>
+        </div>
+
+    </div>
+
+    <!-- 右侧边栏 -->
+    <aside>
+        <!-- 公司简介 -->
+        <div class="sidebar-card">
+            <div class="sidebar-title">公司简介</div>
+            <div class="company-info">
+                <p>浙江中国轻纺城集团股份有限公司（600790）是绍兴市柯桥区最大的国有独资企业。公司依托“中国轻纺城”这一全球最大的纺织品集散中心，主营业务涵盖市场经营、纺织原料贸易、房产开发等领域。</p>
+                <div class="company-tags">
+                    <span class="tag">市场经营</span>
+                    <span class="tag">房地产</span>
+                    <span class="tag">纺织原料</span>
+                    <span class="tag">绍兴国资</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 热门话题榜 -->
+        <div class="sidebar-card">
+            <div class="sidebar-title">
+                热门话题榜
+                <a href="#" style="font-size: 0.8rem; font-weight: normal; color: var(--primary-color);">更多 ></a>
+            </div>
+            <div class="rank-list">
+                <div class="rank-item">
+                    <span class="rank-num">1</span>
+                    <span class="rank-title">轻纺城年报业绩预告</span>
+                    <span class="rank-hot">🔥</span>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">2</span>
+                    <span class="rank-title">柯桥区纺织产业扶持政策</span>
+                    <span class="rank-hot">🔥</span>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">3</span>
+                    <span class="rank-title">轻纺城涨停复盘</span>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">4</span>
+                    <span class="rank-title">租金收入增长分析</span>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">5</span>
+                    <span class="rank-title">纺织板块龙头战法</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 投资风险提示 -->
+        <div class="sidebar-card" style="border-left: 4px solid var(--danger-color);">
+            <div class="sidebar-title" style="border-bottom: none;">风险提示</div>
+            <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">
+                股吧内容仅供投资者参考，不构成投资建议。股市有风险，投资需谨慎。请理性看待网络言论，注意防范诈骗。
+            </p>
+        </div>
+    </aside>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <ul>
+                <li><a href="#">网站简介</a></li>
+                <li><a href="#">服务条款</a></li>
+                <li><a href="#">隐私政策</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>投资工具</h4>
+            <ul>
+                <li><a href="#">股票查询</a></li>
+                <li><a href="#">财经日历</a></li>
+                <li><a href="#">行业资讯</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>友情链接</h4>
+            <ul>
+                <li><a href="#">上交所</a></li>
+                <li><a href="#">深交所</a></li>
+                <li><a href="#">东方财富网</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系方式</h4>
+            <ul>
+                <li>客服邮箱: support@example.com</li>
+                <li>商务合作: business@example.com</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 轻纺城股吧交流平台. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+  </html>
