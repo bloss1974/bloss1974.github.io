@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坐立不安-焦虑缓解与身心舒缓实用指南</title>
+    <meta name="description" content="坐立不安怎么办？本站提供关于焦虑、不安、紧张情绪的成因分析、科学缓解方法、日常调节技巧及专业就医建议，帮助您找回内心的平静与专注。">
+    <meta name="keywords" content="坐立不安, 焦虑症, 紧张情绪, 缓解方法, 心理健康, 失眠">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 1rem;
+            box-shadow: var(--shadow-md);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 0 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-link {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Symptoms Grid */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .symptom-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .symptom-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .symptom-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .symptom-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .symptom-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Solutions List */
+        .solutions-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .solutions-container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .solution-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .solution-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .solution-item h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .solution-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .video-placeholder {
+            background-color: #000;
+            border-radius: 12px;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .play-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.25rem;
+            background-color: #f9fafb;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.25rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 4rem 1.5rem 2rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Utility */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <path d="M12 18v-6"/>
+                <path d="M9 15l3 3 3-3"/>
+            </svg>
+            缓解指南
+        </a>
+        <nav class="nav-links">
+            <a href="#symptoms" class="active">常见症状</a>
+            <a href="#causes">成因分析</a>
+            <a href="#solutions">缓解方法</a>
+            <a href="#faq">常见问题</a>
+        </nav>
+        <a href="#solutions" class="cta-button">立即缓解</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">心理健康专题</span>
+            <h1>坐立不安怎么办？<br>找回内心的平静与专注</h1>
+            <p>持续的紧张、焦虑或无法静心是身体发出的信号。了解“坐立不安”背后的深层原因，掌握科学、实用的调节技巧。</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索症状、原因或解决方法...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见症状 -->
+    <section id="symptoms">
+        <div class="section-header">
+            <h2 class="section-title">坐立不安的常见表现</h2>
+            <a href="#" class="section-link">查看更多症状 &rarr;</a>
+        </div>
+        <div class="symptoms-grid">
+            <article class="symptom-card">
+                <div class="symptom-icon">🚶</div>
+                <h3>身体无法静止</h3>
+                <p>无法长时间保持同一个姿势，频繁变换坐姿、站立或踱步，肢体不由自主地抖动。</p>
+            </article>
+            <article class="symptom-card">
+                <div class="symptom-icon">🧠</div>
+                <h3>思绪杂乱无章</h3>
+                <p>大脑像开了锅一样，无法集中注意力，满脑子都是担忧的想法或过去发生的事情。</p>
+            </article>
+            <article class="symptom-card">
+                <div class="symptom-icon">🤤</div>
+                <h3>生理反应强烈</h3>
+                <p>出现心慌、胸闷、出汗、口干舌燥、喉咙有异物感等类似“惊恐发作”的躯体症状。</p>
+            </article>
+            <article class="symptom-card">
+                <div class="symptom-icon">😴</div>
+                <h3>睡眠质量下降</h3>
+                <p>躺在床上翻来覆去无法入睡，或者半夜易醒，醒后感到更加疲惫和烦躁。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- 成因分析 -->
+    <section id="causes">
+        <div class="section-header">
+            <h2 class="section-title">为什么会感到坐立不安？</h2>
+        </div>
+        <div class="solutions-container">
+            <div class="solution-list">
+                <div class="solution-item">
+                    <h3>1. 环境压力与信息过载</h3>
+                    <p>现代生活中，高强度的工作节奏、复杂的人际关系以及社交媒体带来的信息轰炸，会持续刺激神经系统，导致肾上腺素分泌过剩，引发生理上的“战斗或逃跑”反应。</p>
+                </div>
+                <div class="solution-item">
+                    <h3>2. 生理因素与激素水平</h3>
+                    <p>咖啡因摄入过量、缺乏运动、睡眠不足、甲状腺功能亢进或低血糖等生理问题，都会直接导致身体处于亢奋或虚弱的交替状态，表现为情绪上的焦躁不安。</p>
+                </div>
+                <div class="solution-item">
+                    <h3>3. 心理状态与潜在焦虑</h3>
+                    <p>长期的压力累积可能导致焦虑症（GAD）。这种状态并非单一事件引起，而是对未来的过度担忧、完美主义倾向或对失控感的恐惧在作祟。</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="video-placeholder">
+                    <div class="play-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                </div>
+                <p style="margin-top:1rem; color:var(--text-secondary); font-size:0.9rem;">观看专家解读：如何快速识别焦虑症的早期信号？</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 缓解方法 -->
+    <section id="solutions">
+        <div class="section-header">
+            <h2 class="section-title">科学缓解与调节技巧</h2>
+            <a href="#" class="section-link">阅读完整指南 &rarr;</a>
+        </div>
+        <div class="solutions-container">
+            <div class="video-placeholder" style="background: linear-gradient(to right, #e0f2fe, #f0f9ff); color: var(--text-secondary);">
+                <div style="text-align: center;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <p>冥想引导音频加载中...</p>
+                </div>
+            </div>
+            <div class="solution-list">
+                <div class="solution-item">
+                    <h3>深呼吸法（4-7-8 呼吸法）</h3>
+                    <p>这是一种被广泛验证的生理调节技巧。用鼻子吸气4秒，憋气7秒，再用嘴缓慢呼气8秒。重复4-5次，能有效强制副交感神经系统启动，降低心率。</p>
+                </div>
+                <div class="solution-item">
+                    <h3>渐进式肌肉放松（PMR）</h3>
+                    <p>从脚趾开始，用力紧绷肌肉5秒钟，然后突然完全放松。依次向上移动到小腿、大腿、腹部、手部，感受紧张感消散的过程。</p>
+                </div>
+                <div class="solution-item">
+                    <h3>规律的有氧运动</h3>
+                    <p>运动是消耗多余肾上腺素的最佳方式。快走、慢跑或瑜伽能促进多巴胺分泌，改善睡眠，从根本上减少身体“坐立不安”的能量储备。</p>
+                </div>
+                <div class="solution-item">
+                    <h3>数字排毒与信息节食</h3>
+                    <p>减少摄入负面新闻和社交媒体的碎片化信息。设定“无手机时段”，给大脑留出缓冲和整理思绪的空间。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="section-header">
+            <h2 class="section-title">常见问题解答</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">偶尔坐立不安是焦虑症吗？</div>
+                <div class="faq-answer">
+                    <p>偶尔的紧张通常由特定事件（如考试、演讲）引起，属于正常的生理反应。但如果这种状态持续超过6个月，且影响日常生活和工作，则需警惕焦虑症。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">喝咖啡会加重坐立不安吗？</div>
+                <div class="faq-answer">
+                    <p>咖啡因是中枢神经兴奋剂，会模拟焦虑的身体反应（如心跳加快）。如果您本身容易感到不安，建议减少咖啡因摄入，或改喝花草茶。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">什么时候需要看心理医生？</div>
+                <div class="faq-answer">
+                    <p>如果您发现自己无法控制地反复思考，出现惊恐发作（濒死感），或者因为焦虑导致无法出门、无法工作，建议及时寻求专业心理咨询或治疗。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">吃药可以治好坐立不安吗？</div>
+                <div class="faq-answer">
+                    <p>药物（如抗焦虑药或抗抑郁药）在专业医生指导下可以有效缓解症状。但药物通常是辅助手段，配合心理疏导和生活方式调整效果更佳。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>缓解指南</h4>
+            <ul>
+                <li><a href="#">焦虑症科普</a></li>
+                <li><a href="#">压力管理</a></li>
+                <li><a href="#">睡眠改善</a></li>
+                <li><a href="#">情绪调节</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>资源</h4>
+            <ul>
+                <li><a href="#">在线测评</a></li>
+                <li><a href="#">专家列表</a></li>
+                <li><a href="#">互助社区</a></li>
+                <li><a href="#">相关书籍</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <ul>
+                <li><a href="#">网站介绍</a></li>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">联系方式</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>关注我们</h4>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;">获取最新的心理健康资讯与缓解技巧。</p>
+            <a href="#" class="cta-button" style="background-color: #334155; font-size: 0.8rem;">订阅简报</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 缓解指南. All rights reserved. 本网站内容仅供参考，不构成医疗建议。</p>
+    </div>
+</footer>
+
+<script>
+    // FAQ Toggle Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
