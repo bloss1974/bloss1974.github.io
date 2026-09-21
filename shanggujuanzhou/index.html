@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上古卷轴5龙裔dlc - 史诗任务与萨满神庙攻略指南</title>
+    <meta name="description" content="本站提供上古卷轴5龙裔dlc的详细攻略、全地图坐标、任务流程解析以及萨满神庙和黑沼泽的生存指南。包含DLC下载信息、装备推荐与技能加点建议。">
+    <meta name="keywords" content="上古卷轴5龙裔dlc, Skyrim Dragonborn, DLC攻略, 萨满神庙, 黑沼泽, 玛拉凯尔, 史丹默尔">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5c3a21;
+            --secondary-color: #8b5a2b;
+            --accent-color: #d4af37;
+            --text-dark: #1a1a1a;
+            --text-light: #f4f4f4;
+            --bg-body: #f0f0f0;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: #666;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/seed/skyrim_dragon/1920/1080.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #e5c150;
+            transform: translateY(-2px);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
+        }
+
+        .card-text {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #666;
+            margin-right: 0.5rem;
+        }
+
+        /* Feature List */
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #fff;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--secondary-color);
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.2rem;
+            background-color: #fafafa;
+            color: #555;
+        }
+
+        .faq-answer.open {
+            padding: 1.2rem;
+            max-height: 500px; /* Arbitrary large height */
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>🐉</span> 龙裔之家
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#overview">游戏概览</a></li>
+                    <li><a href="#features">特色内容</a></li>
+                    <li><a href="#guide">新手攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索阿祖拉神庙与巨龙之魂</h1>
+                <p>深入了解上古卷轴5：天际 - 龙裔DLC。从索塞斯帝国到黑沼泽，获取完整的任务流程、神庙解谜指南及强力装备。</p>
+                <a href="#guide" class="cta-button">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>关于龙裔DLC</h2>
+                    <p>《龙裔》是《上古卷轴5：天际》的第三个大型资料片</p>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/morvath/600/400" alt="索塞斯帝国" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">索塞斯帝国</h3>
+                            <p class="card-text">探索一个全新的区域——索塞斯帝国。这里充满了神秘的美学风格、独特的建筑以及古老的智慧，是《龙裔》DLC的核心探索区域。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/sahloknir/600/400" alt="巨龙" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">巨龙之魂</h3>
+                            <p class="card-text">玩家将有机会直面强大的上古巨龙阿祖拉。通过特殊的龙吼技能，你可以吞噬龙魂，获得前所未有的战斗能力。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/miraak/600/400" alt="玛拉凯尔" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">玛拉凯尔</h3>
+                            <p class="card-text">揭开前代龙裔玛拉凯尔的秘密。他的存在不仅威胁着天际省，更牵扯到整个泰姆瑞尔的历史谜团。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="grid-2">
+                    <div>
+                        <h2 style="margin-bottom: 1.5rem; color: var(--primary-color);">新增核心内容</h2>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">⚔️</span>
+                                <div>
+                                    <strong>全新武器与护甲</strong>
+                                    <p style="font-size: 0.9rem; margin-top:0.2rem;">包括附魔武器“阿祖拉的星象盘”和可升级的龙骨护甲，大幅提升角色属性。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🗣️</span>
+                                <div>
+                                    <strong>特殊龙吼技能</strong>
+                                    <p style="font-size: 0.9rem; margin-top:0.2rem;">学习“龙破”和“龙裔之怒”，这些技能在对抗强敌时具有决定性作用。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🏠</span>
+                                <div>
+                                    <strong>可建造房屋</strong>
+                                    <p style="font-size: 0.9rem; margin-top:0.2rem;">在白漫城外拥有一座名为“月湖小屋”的豪宅，拥有独特的龙骨装饰。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 style="margin-bottom: 1.5rem; color: var(--primary-color);">区域地图与地点</h2>
+                        <div style="background: #f4f4f4; padding: 1.5rem; border-radius: 8px;">
+                            <h4 style="margin-bottom: 1rem; color: var(--secondary-color);">主要探索区域</h4>
+                            <ul style="color: #444; line-height: 2;">
+                                <li>📍 <strong>索塞斯帝国：</strong> 艾利都城与阿祖拉神庙</li>
+                                <li>📍 <strong>黑沼泽：</strong> 危险的沼泽地带，巨龙聚集</li>
+                                <li>📍 <strong>拉塔维克斯遗迹：</strong> 古代龙裔的据点</li>
+                                <li>📍 <strong>月湖：</strong> 可建造房屋的地点</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>新手攻略与指引</h2>
+                    <p>从接取任务到击败最终BOSS的完整步骤</p>
+                </div>
+                
+                <article class="card" style="margin-bottom: 2rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">1. 接取任务：索塞斯帝国</h3>
+                        <p class="card-text">在白漫城的“风盔城”外，你会遇到一个名叫“阿祖拉祭司”的NPC。与她对话后，她会指引你前往索塞斯帝国。你需要完成一系列前置任务才能进入该区域。</p>
+                    </div>
+                </article>
+
+                <article class="card" style="margin-bottom: 2rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">2. 解锁龙吼：龙破</h3>
+                        <p class="card-text">在阿祖拉神庙中，你需要通过一系列谜题（涉及星辰和月亮的符号）。解开所有谜题后，与阿祖拉神像对话，即可获得龙吼“龙破”。该龙吼可以迫使巨龙解除飞行状态，是战斗的关键。</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">3. 击败玛拉凯尔</h3>
+                        <p class="card-text">最终Boss战发生在索塞斯帝国的中心。玛拉凯尔会使用多种元素魔法和巨龙形态。建议携带大量治疗药水，并利用“龙破”技能打断他的施法。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题 (FAQ)</h2>
+                    <p>关于《龙裔》DLC的常见疑问解答</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        龙裔DLC需要购买吗？
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>是的，《龙裔》是《上古卷轴5：天际》的官方付费DLC。你需要通过Steam、Bethesda.net或主机商店购买并下载才能游玩该内容。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        如何解锁阿祖拉神庙的宝藏？
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>在神庙中，你需要根据墙壁上的星座图案调整中央神像的位置。每个星座对应一个符号，正确排列后神像会发出光芒，宝箱随之开启。切记，神像不能被放置在错误的星座位置，否则会触发陷阱。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        月湖小屋可以升级吗？
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以。月湖小屋支持房屋升级功能。你可以购买扩建包，增加新的房间、厨房设施以及一个巨大的温室。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 上古卷轴5龙裔攻略网. 保留所有权利.</p>
+            <p style="font-size: 0.9rem; opacity: 0.7;">本站为粉丝攻略站点，游戏版权属于 Bethesda Softworks.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').classList.remove('open');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    answer.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
